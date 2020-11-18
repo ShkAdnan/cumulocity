@@ -1,1 +1,17 @@
-
+<c8y-title>Devices</c8y-title>
+<table class="table" *ngIf="devices !== undefined && devices.length > 0">
+<tr>
+<th translate>Id</th>
+<th translate>Name</th>
+<th translate>Owner</th>
+<th translate>Type</th>
+</tr>
+<tr *ngFor="let device of devices">
+  <td>
+    <a href routerLink="/devices/{{device.id}}">{{device.id}}</a>
+    </td>
+<td>{{device.name}}</td>
+<td>{{device.owner}}</td>
+<td>{{device.type}}</td>
+</tr>
+</table>
