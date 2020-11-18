@@ -1,0 +1,217 @@
+<c8y-title translate>shboard </c8y-title>
+<!-- <a href routerLink="/devices">Show devices</a> -->
+<!-- Starting Main Row-->
+<div class="container d-flex justify-content-center">
+    <div class="weather">
+<div class="row">
+    <!--Graph-->
+    <div class="col-md-12 col-12">
+        <highcharts-chart
+            [Highcharts] = "highcharts" 
+            [options] = "chartOptions" 
+            style = "width: 100%; height: 400px; display: block;">
+        </highcharts-chart>
+    </div>
+    <!--Card-->
+    
+    
+</div><!--Main Row End Here-->
+</div>
+</div>
+<!-- Other Graphs-->
+<div style="height: 30px;"></div>
+<div class="container d-flex justify-content-center">
+    <div class="weather">
+        <div class="row">
+
+            <!--First Column-->
+            <div class="col-lg-3 col-md-3 col-3">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>Tempature</p>
+                    </div>
+                    <div class="temp">20 C<sup>&deg;</sup></div>
+                    <app-chart></app-chart>
+                </div>
+            </div>
+            <!--First Column End-->
+
+             <!--Second Column-->
+             <div class="col-lg-3 col-md-3 col-3">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>Humidity</p>
+                    </div>
+                    <div class="temp">35.2 %<sup>&deg;</sup></div>
+                    <app-humdudity></app-humdudity>
+                </div>
+            </div>
+            <!--Second Column End-->
+
+             <!--Third Column-->
+             <div class="col-lg-3 col-md-3 col-3">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>PM 2.5</p>
+                    </div>
+                    <div class="temp">14 ug/m3<sup>&deg;</sup></div>
+                   <app-pm01></app-pm01>
+                </div>
+            </div>
+            <!--Third Column End-->
+
+             <!--Fourth Column-->
+             <div class="col-lg-3 col-md-3 col-3">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>PM 10</p>
+                    </div>
+                    <div class="temp">14 ug/m3<sup>&deg;</sup></div>
+                    <app-chart></app-chart>
+                </div>
+            </div>
+            <!--Third Column End-->
+
+             <!--Fourth Column-->
+             <div class="col-lg-4 col-md-4 col-4">
+                <div class="card-graph" style="text-align:center"> 
+                    <div class="title">
+                        <p>CO 2</p>
+                    </div>
+                  
+                    <app-co2></app-co2>
+                </div>
+            </div>
+            <!--Fourth Column End-->
+
+             <!--Fivth Column-->
+             <div class="col-lg-4 col-md-4 col-4">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>AQI</p>
+                    </div>
+                  <app-pm10></app-pm10>
+                </div>
+            </div>
+            <!--Fivth Column End-->
+
+             <!--Sixth Column-->
+             <div class="col-lg-4 col-md-4 col-4">
+                <div class="card-graph"> 
+                    <div class="title">
+                        <p>NH 3</p>
+                    </div>
+                    <app-nh3></app-nh3>
+                </div>
+            </div>
+            <!--Sixth Column End-->
+            
+
+        </div><!--ROW END-->
+    </div><!--Weather Div-->
+</div><!--Container-->
+
+
+<!-- //Testing -->
+<!-- <div style="height: 30px;"></div>
+<div class="container d-flex justify-content-center">
+    <div class="weather">
+        <div class="row">
+            <div class=" col-md-6">
+                <div class="cards"> <span style="margin-left: 110px;" class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                    
+                    <div class="title">
+                        <p>Lahore</p>
+                    </div>
+                    <div class="temp">+20<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">47</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="cards"> <span style="margin-left: 110px;" class="icon"><img class="img-fluid" src="https://img.icons8.com/color/50/000000/wind.png" /></span>
+                    <div class="title">
+                        <p>Karachi</p>
+                    </div>
+                    <div class="temp">+18<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">20</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="cards"> <span style="margin-left: 110px;" class="icon"><img class="img-fluid" src="https://img.icons8.com/office/80/000000/partly-cloudy-day.png" /></span>
+                    <div class="title">
+                        <p>Islamabad</p>
+                    </div>
+                    <div class="temp">+18<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">20</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="cards"> <span style="margin-left: 110px;" class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                    <div class="title">
+                        <p>Faisalabad</p>
+                    </div>
+                    <div class="temp">+20<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">47</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+      <!--  </div>Row End-->
+ 
+    <!--</div> 
+    //weather-->
+
+
